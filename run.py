@@ -1,3 +1,5 @@
+import os
+
 from app import app, db
 from app.models import User, Advert
 
@@ -8,4 +10,8 @@ def make_shell_context():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(
+        debug=True,
+        host='0.0.0.0',
+        port=int(os.getenv('PORT', default=5000)),
+    )
