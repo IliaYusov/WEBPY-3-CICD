@@ -1,4 +1,4 @@
-from .. import run as tested_app
+import run as tested_app
 import pytest
 
 
